@@ -12,7 +12,7 @@ const main = async () => {
     {
       name: 'Pizza',
       price: '$10',
-      img: 'https://cdn.shopify.com/s/files/1/0205/9582/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?crop=center&height=800&v=1644590192&width=800'
+      img: 'https://assets-westchestermagazine-com.s3-accelerate.amazonaws.com/2018/12/pizza7.jpg'
     },
     {
       name: 'Corn Dog',
@@ -37,7 +37,7 @@ const main = async () => {
     {
       name: 'Pretzel',
       price: '$7',
-      img: 'https://cdn.shopify.com/s/files/1/0325/8846/4172/products/monster-pretzel-box-5-giant-pretzels-640615_1200x1200.jpg?v=1645118254'
+      img: 'https://images.food52.com/ieUrPzT_G-HUjZ1ZK35k1ZH1cIQ=/1200x675/df9cbd32-31a3-4f10-be89-fdd8eabd175c--2016-0511_baking-basics-giant-pretzel_linda-xiao_249.jpg'
     },
     {
       name: 'Drumstick',

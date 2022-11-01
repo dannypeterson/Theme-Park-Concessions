@@ -61,13 +61,19 @@ const createSnack = async (req, res) => {
 //plate
 
 const getPlate = async (req, res) => {
-  const plate = await Plate.find()
+  const plate = await Plate.find().populate(['foods', 'drinks', 'snacks'])
   res.send(plate)
 }
 
 const deletePlate = async (req, res) => {
   const { id } = req.params
   const plate = await Plate.findByIdAndDelete(id)
+  res.send(plate)
+}
+
+const addPlate = async (req, res) => {
+  const plate = await new Plate(req.body)
+  plate.save()
   res.send(plate)
 }
 
@@ -82,5 +88,6 @@ module.exports = {
   createDrink,
   createFood,
   createSnack,
-  deletePlate
+  deletePlate,
+  addPlate
 }

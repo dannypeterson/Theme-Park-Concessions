@@ -1,15 +1,113 @@
-
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   margin: 0;
+  height: cover;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: red;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 10px;
+}
+
+/* header stuff */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+  
+}
+
+li, a {
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a {
+  transition: all 0.3s ease 0s;
+}
+.nav_links li p {
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.nav_links li a:hover {
+  color: #0088a9;
+}
+.nav_links li p:hover {
+  color: #0088a9;
+}
+
+.logo {
+  height: 150px;
+  width: 200px;
+  margin-left: 0px;
+}
+
+.start-order {
+  background-image: url('https://d23.com/app/uploads/2016/02/1180-x-600-021816_coming-to-disney-parks-2016-780x440.jpg');
+  background-color: #cccccc;
+  height: 125vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Add-Food {
+  background-color: black;
+
+}
+
+button {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  background-color: lightgrey;
+  margin-left: 20px;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#submit-order-button {
+  cursor: pointer;
+  border-radius: 12px;
 }

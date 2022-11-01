@@ -8,7 +8,7 @@ const Home = () => {
     <div className="home-header">
       <h1>Welcome to the Concession Stand!</h1>
       <div id="theme park-1" className="theme-picture"></div>
-      <div onClick={() => navigate('/startorder')} className="start-order">
+      <div onClick={() => navigate('/startorder')} className="home-order">
         Start Order
       </div>
     </div>

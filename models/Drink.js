@@ -2,9 +2,9 @@ const { Schema } = require('mongoose')
 
 const Drink = new Schema(
   {
-    name: { type: String, required: true },
-    price: { type: String, required: true },
-    img: { type: String, required: true }
+    name: { type: String, required: false },
+    price: { type: String, required: false },
+    img: { type: String, required: false }
   },
   { timestamps: true }
 )
