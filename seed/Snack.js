@@ -3,7 +3,7 @@ const { Snack } = require('../models')
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-  const snacks = [
+  const snack = [
     {
       name: 'Dole Whip',
       price: '$6',
