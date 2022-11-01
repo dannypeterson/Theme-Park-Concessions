@@ -23,7 +23,7 @@ router.post('/snacks', controllers.createSnack)
 router.get('/snacks/:id', controllers.getSnackById)
 
 //plate
-router.delete('/plate/:id', controllers.deletePlate)
+router.delete('/receipt/:id', controllers.deletePlate)
 router.post('/receipt', controllers.addPlate)
 router.get('/receipt', controllers.getPlate)
 

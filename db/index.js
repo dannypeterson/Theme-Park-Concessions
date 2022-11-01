@@ -1,11 +1,15 @@
 //where we establish connection to MongoDB database
 
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-let MONGODB_URI = 'mongodb://127.0.0.1:27017/parkDatabase'
+let dbUrl =
+  process.env.NODE_ENV === 'production'
+    ? process.env.MONGODB_URI
+    : 'mongodb://127.0.0.1:27017/parkDatabase'
 
 mongoose
-  .connect(MONGODB_URI)
+  .connect(dbUrl)
   .then(() => {
     console.log('Successfully connected to Parks Database.')
   })

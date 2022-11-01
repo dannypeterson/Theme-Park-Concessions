@@ -14,7 +14,7 @@ return(
         <Link to="/">Home</Link>
       </li>
       <li>
-        <p className='Back' onClick={() => navigate(-1)}>Back</p>
+        <p className='Back' onClick={() => navigate(-1)}>Back to Menu</p>
       </li>
     </ul>
   </nav>

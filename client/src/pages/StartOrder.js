@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const StartOrder = (props) => {
@@ -13,12 +13,9 @@ const StartOrder = (props) => {
 
   const handleSubmit = async () => {
     console.log(props.formState)
-    let response = await axios.post(
-      'http://localhost:3001/receipt',
-      props.formState
-    )
+    let response = await axios.post(`/receipt`, props.formState)
     props.setFormState(props.initialState)
-    navigate('/receipt')
+    navigate(`/receipt`)
   }
 
   return (

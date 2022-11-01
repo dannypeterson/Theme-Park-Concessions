@@ -1,25 +1,34 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import Header from '../components/Header'
+import { useNavigate } from 'react-router-dom'
 
 const Receipt = () => {
   const [name, setName] = useState([])
   const [foods, setFoods] = useState([])
   const [drinks, setDrinks] = useState([])
   const [snacks, setSnacks] = useState([])
+  const [id, setId] = useState([])
 
   const getItems = async () => {
-    const response = await axios.get('http://localhost:3001/receipt')
+    const response = await axios.get(`/receipt`)
     setName(response.data[response.data.length - 1].name)
     setFoods(response.data[response.data.length - 1].foods)
     setDrinks(response.data[response.data.length - 1].drinks)
     setSnacks(response.data[response.data.length - 1].snacks)
-    console.log(response.data[response.data.length - 1])
+    setId(response.data[response.data.length - 1]._id)
   }
 
   useEffect(() => {
     getItems()
   }, [])
+
+  const navigate = useNavigate()
+
+  const deleteReceipt = async () => {
+    const response = await axios.delete(`/receipt/${id}`)
+    navigate('/startorder')
+  }
 
   return (
     <div>
@@ -55,6 +64,9 @@ const Receipt = () => {
           </div>
         ))}
       </div>
+      <h3 id={id} onClick={deleteReceipt}>
+        Delete {name}'s order
+      </h3>
     </div>
   )
 }
