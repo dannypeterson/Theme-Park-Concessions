@@ -8,7 +8,7 @@ const Snacks = (props) => {
   const [snackId, setSnackId] = useState([])
 
   const getSnacks = async () => {
-    const response = await axios.get('/snacks')
+    const response = await axios.get('/api/snacks')
     setSnacks(response.data)
   }
 
@@ -17,7 +17,7 @@ const Snacks = (props) => {
   }, [])
 
   const handleSubmitSnack = async (event) => {
-    const response = await axios.get(`/snacks/${event.currentTarget.id}`)
+    const response = await axios.get(`/api/snacks/${event.currentTarget.id}`)
     setSnackId(response.data._id)
     console.log(response.data._id)
 

@@ -5,7 +5,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 
-const Base_URL = '/'
+const Base_URL = '/api/'
 
 const ViewFood = (props) => {
   const [foods, setFoods] = useState([])

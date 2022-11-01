@@ -7,7 +7,7 @@ const Drinks = (props) => {
   const [drinkId, setDrinkId] = useState([])
 
   const getDrinks = async () => {
-    const response = await axios.get('/drinks')
+    const response = await axios.get('/api/drinks')
     setDrinks(response.data)
   }
 
@@ -16,7 +16,7 @@ const Drinks = (props) => {
   }, [])
 
   const handleSubmitDrink = async (event) => {
-    const response = await axios.get(`/drinks/${event.currentTarget.id}`)
+    const response = await axios.get(`/api/drinks/${event.currentTarget.id}`)
     setDrinkId(response.data._id)
     console.log(response.data._id)
 

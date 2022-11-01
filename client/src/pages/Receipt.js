@@ -11,7 +11,7 @@ const Receipt = () => {
   const [id, setId] = useState([])
 
   const getItems = async () => {
-    const response = await axios.get(`/receipt`)
+    const response = await axios.get(`/api/receipt`)
     setName(response.data[response.data.length - 1].name)
     setFoods(response.data[response.data.length - 1].foods)
     setDrinks(response.data[response.data.length - 1].drinks)
@@ -26,7 +26,7 @@ const Receipt = () => {
   const navigate = useNavigate()
 
   const deleteReceipt = async () => {
-    const response = await axios.delete(`/receipt/${id}`)
+    const response = await axios.delete(`/api/receipt/${id}`)
     navigate('/startorder')
   }
 

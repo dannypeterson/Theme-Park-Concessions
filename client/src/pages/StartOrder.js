@@ -13,7 +13,7 @@ const StartOrder = (props) => {
 
   const handleSubmit = async () => {
     console.log(props.formState)
-    let response = await axios.post(`/receipt`, props.formState)
+    let response = await axios.post(`/api/receipt`, props.formState)
     props.setFormState(props.initialState)
     navigate(`/receipt`)
   }
