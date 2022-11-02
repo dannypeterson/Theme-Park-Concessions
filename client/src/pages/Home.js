@@ -6,11 +6,18 @@ const Home = () => {
 
   return (
     <div className="home-header">
-      <h1>Welcome to the Concession Stand!</h1>
+      <div className="home-header1"></div>
+      <div className="home-header2"></div>
+      <div className="home-header3"></div>
+      <marquee behavior="scroll" direction="left" scrollamount="30">
+        <h1 className="home-title"> Welcome to the Concession Stand!</h1>
+      </marquee>
       <div id="theme park-1" className="theme-picture"></div>
-      <h3 onClick={() => navigate('/startorder')} className="home-order">
-        Start Order
-      </h3>
+      <div className="order-button">
+        <button onClick={() => navigate('/startorder')} className="home-order">
+          Start Order
+        </button>
+      </div>
     </div>
   )
 }

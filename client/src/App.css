@@ -11,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: red;
+  color: black;
 }
 
 code {
@@ -82,32 +82,257 @@ a:link, a:visited {
   margin-left: 0px;
 }
 
+
+
+
+
 .start-order {
-  background-image: url('https://d23.com/app/uploads/2016/02/1180-x-600-021816_coming-to-disney-parks-2016-780x440.jpg');
-  background-color: #cccccc;
-  height: 125vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgray;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
+  background-image: url('https://thumbs.dreamstime.com/z/concession-stand-arizona-state-fair-fairgoers-phoenix-line-up-to-purchase-ice-cream-other-sweet-snacks-156438558.jpg');
 }
+
+.Build {
+  text-align: center;
+  color: black;
+  font-size: 65px;
+}
+
+
+.main {
+  background-color: bisque;
+}
+
+#item-header {
+  text-align: center;
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+  color: #edf0f1;
+  padding-bottom: 10px;
+}
+
+.home-order {
+  background-color: lightcoral;
+  display: inline-block;
+  padding: 28px 80px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  font-size: xx-large;
+  font-weight: 800;
+}
+
 
 .Add-Food {
   background-color: black;
 
 }
 
+/* Buttons */
 button {
+  display: inline-flex;
+  padding: 15px 25px;
+  font-size: 24px;
   cursor: pointer;
-  transition-duration: 0.4s;
-  background-color: lightgrey;
-  margin-left: 20px;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  background-color: lightcoral;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
 
-button:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+.add-to-plate-button {
+  font-size: 20px;
+  padding: 7px 12px 2px 15px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
 
 #submit-order-button {
+  align-content: center;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: coral;
+}
+
+button:active {
+  background-color: coral;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* home page */
+
+.home-header {
+  margin-top: 300px;
+}
+
+.home-header1 {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position: absolute;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+.home-header2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.home-header3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+.home-order {
+  font-family: monospace;
+}
+
+.order-button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 30%;
+}
+
+.home-title {
+  color: rgb(212, 127, 140);
+  font-family: fantasy;
+  font-size: 60px;
+  text-shadow: 2px 2px;
+}
+
+/* #receipt-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+#food-order {
+  text-align: center;
+  color: black;
   cursor: pointer;
-  border-radius: 12px;
+  font-size: 100px;
+  width: 400px;
+  height: 200px;
+  border-radius: 200px;
+  background-color: lightgrey;
+  font-weight: bolder;
+  cursor: pointer;
+  filter: brightness(1.5);
+}
+
+#food-order:hover {
+  box-shadow: 0 12px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#drinks-order {
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  font-size: 100px;
+  width: 450px;
+  height: 200px;
+  border-radius: 200px;
+  background-color: lightgrey;
+  font-weight: bolder;
+  cursor: pointer;
+  filter: brightness(1.5);
+}
+
+#drinks-order:hover {
+  box-shadow: 0 12px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#snacks-order {
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  font-size: 100px;
+  width: 500px;
+  height: 200px;
+  border-radius: 200px;
+  background-color: lightgrey;
+  font-weight: bolder;
+  cursor: pointer;
+  filter: brightness(1.5);
+}
+
+#snacks-order:hover {
+  box-shadow: 0 12px 5px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+.nameplate {
+  text-align: center;
+}
+
+.textbox {
+  width: 200px;
+  height: 65px;
+  color: black;
+  border-radius: 200px;
+  background-color: lightgrey;
+  font-size: 23px;
+  font-weight: bolder;
+  text-align: center;
+  size: 75px;
+  cursor: pointer;
+}
+
+.food-map {
+display: flex;
+justify-content: space-between;
+margin: 10px 20px;
+}
+
+.delete-container {
+  display: flex;
+  justify-content: center;
+}
+
+.delete-button {
+  height: fit-content;
+  width: fit-content;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: rgb(251, 210, 161);
 }

@@ -7,7 +7,6 @@ import Foods from './pages/Foods'
 import Drinks from './pages/Drinks'
 import Snacks from './pages/Snacks'
 import { useState } from 'react'
-import { set } from 'mongoose'
 
 function App() {
   const initialState = {

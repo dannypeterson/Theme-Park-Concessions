@@ -31,17 +31,23 @@ const Snacks = (props) => {
   }
 
   return (
-    <div>
+    <div className="main">
       <Header />
+      <h1 id="item-header">Snacks</h1>
       {snacks.map((snack) => (
         <div key={snack._id}>
-          <h2>
-            {snack.name}
-            <button id={snack._id} onClick={handleSubmitSnack} input="submit">
-              Add to Plate
-            </button>
-          </h2>
-          <p>{snack.price}</p>
+          <div className="food-map">
+            <h2>{snack.name}</h2>
+            <h4>{snack.price}</h4>
+          </div>
+          <button
+            className="add-to-plate-button"
+            id={snack._id}
+            onClick={handleSubmitSnack}
+            input="submit"
+          >
+            Add to Plate
+          </button>
 
           <img src={snack.img} alt="img"></img>
         </div>

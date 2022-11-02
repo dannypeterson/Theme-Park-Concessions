@@ -20,10 +20,13 @@ const StartOrder = (props) => {
 
   return (
     <div className="start-order">
-      <h1>Build your plate! Select the options below to view our menus!</h1>
+      <h1 className="Build">
+        Build your plate! Select the options below to view our menus!
+      </h1>
 
       <div className="nameplate">
         <input
+          className="textbox"
           placeholder="Name your plate:"
           onChange={handleChange}
           id="name"
@@ -44,6 +47,7 @@ const StartOrder = (props) => {
         <h2>Snacks</h2>
         <img></img>
       </div>
+
       <div id="receipt-order">
         <h2>
           <button id="submit-order-button" onClick={handleSubmit}>

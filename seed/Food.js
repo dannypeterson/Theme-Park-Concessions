@@ -6,7 +6,7 @@ const main = async () => {
   const foods = [
     {
       name: "Nathan's Hotdog and Fries",
-      price: '$15',
+      price: '$15.00',
       img: 'https://res.cloudinary.com/sagacity/image/upload/c_crop,h_1068,w_1600,x_0,y_18/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1200/IMG_4804_rmdgzr.jpg'
     },
     {
