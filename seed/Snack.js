@@ -46,7 +46,7 @@ const main = async () => {
     }
   ]
 
-  await Snack.insertMany(snacks)
+  await Snack.insertMany(snack)
   console.log('Created Snacks!')
 }
 
